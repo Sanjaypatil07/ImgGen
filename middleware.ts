@@ -1,7 +1,10 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
 
- 
-export default clerkMiddleware();
+
+import { clerkMiddleware } from '@clerk/nextjs/server'
+
+export default clerkMiddleware({
+    //  publicRoutes:['/api/webhooks/clerk']
+  });
 
 export const config = {
   matcher: [
@@ -10,4 +13,8 @@ export const config = {
     // Always run for API routes
     '/(api|trpc)(.*)',
   ],
-};
+}
+
+
+
+
